@@ -1,0 +1,196 @@
+/*更换背景*/
+body{
+	   background: url(../images/Changebg/1.jpg);
+       /*background-size:cover;*/
+	   margin:0;
+      /* overflow:hidden;*/
+	 }
+
+	 ul{
+	   list-style-type:none;
+	   margin:0;
+	   padding:0;
+	   height:200px;
+	   display:flex;/*弹性盒模型*/
+	   justify-content:space-around;/*子元素水平排列方式*/
+	   align-items:center;/*子元素垂直方向排列*/
+	 }
+   
+     #img-wrap{
+	    display:none;
+	    width:100%;
+		height:200px;
+		background:rgba(0,0,0,.5);/*css3新增表示颜色red green blue alpha*/
+	 }
+
+	 #tab-btn{
+	   position:absolute;/*绝对定位（忽略其他元素）*/
+	   right:0;
+	   top:0;
+	   width:50px;
+	   height:50px;
+	   background:url("../images/Changebg/upseek.png");
+	   cursor:pointer;/*改变指针样式（手指）*/
+	 }
+      
+	  #tab-btn:hover{
+	    background-position-y:-64px;/*垂直方向改变背景图片的位置(上负下正 左负右正)*/
+	  }
+
+
+
+
+/*header*/
+#header{
+	width: auto;
+	height: 10%;
+	font-size: 20px;
+	font-family: 宋体;
+	color: black;
+}
+.header-content{
+	margin: 30px 540px;
+}
+/*header*/
+
+
+
+/*nav*/
+#nav {
+	width: 100%;
+	line-height: 40px;
+	height: 40px;
+	margin: 0 auto 10px;
+	background: rgba(245,245,245,0.2);
+	position: relative;
+}
+
+#nav-ul {
+	list-style: none;
+	margin: auto;
+	width: 1030px;
+	height:40px;
+}
+
+#nav ul li {
+	float: left;
+	width: 100px;
+	text-align: center;
+	text-shadow: #333 1px 1px 1px;
+	display: inline-block;
+}
+
+#nav ul li a {
+	color: #FFF;
+	cursor: pointer;
+	display: block;
+}
+
+#nav ul li a:hover {
+	background: #E15782;
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 50px 0;
+}
+
+#nav ul li#nav_current a {
+	background: #E15782;
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 50px 0;
+}
+/*nav*/
+
+
+/*content*/
+#content{
+	width:70%;
+	height:1500px;
+	margin: auto;
+	border: dashed;
+	overflow: hidden;
+}
+/*contetn*/
+
+
+
+
+/*left-content*/
+#left-content{
+	width: 43%;
+	height: 500px;
+	border: dashed;
+}
+/*left-content*/
+
+
+/*right-content*/
+#right-content{
+	width: 23%;
+	height: 500px;
+	float: left;
+	border: dashed;
+}
+/*right-content*/
+
+
+
+
+
+/*Footer 设计 begin*/
+
+/*.footer{
+	position:absolute;
+	width:100%;
+	height:150px;
+	background-color:#FFFFFF;
+	margin-top:1121px;
+	}
+.footer .footerHr{
+	width:100%;
+	border:1px solid  #E2DDDD;
+}
+.footerContent{
+	width:100%;
+	height:100px;
+	margin-top:50px;
+	padding-left:680px;
+	background-color:#FAFAFA;
+	color:#ccc;
+}
+.footerContent a:first-child{
+	margin-left:0;
+}
+.footerContent a{
+	margin:0 8px;
+	color:#999;
+	font-size:14px;
+	text-decoration:none;
+}
+.footerContent .footerSpan{
+	margin:0 155px;
+	color:#999;
+	font-size:14px;
+	
+}*/
+
+/*Footer设计  end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
