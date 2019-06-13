@@ -1,10 +1,162 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Ljl的blog</title>
-	</head>
-	<body>
-		
-	</body>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>LJL的blog</title>
+  <link   rel="stylesheet" type="text/css" href="style/css/style.css"/>
+  <script type="text/javascript" src="style/js/jquery.js"></script>
+  <script type="text/javascript" src="style/js/jquery.snow.min.js"></script>
+ 
+ </head>
+ <body>
+ 	
+ 	
+ 	<!--更换背景图   begin-->
+   <div id="img-wrap">
+      <ul>
+	    <li data-img-src="style/images/Changebg/1.jpg"><!-- 自定义属性 -->
+		<img src="style/images/Changebg/1-1.jpg" width="160" height="100">
+		</li>
+	    <li data-img-src="style/images/Changebg/2.jpg">
+		<img src="style/images/Changebg/2-2.jpg" width="160" height="100">
+		</li>
+		<li data-img-src="style/images/Changebg/3.jpg">
+		<img src="style/images/Changebg/3-3.jpg" width="160" height="100">
+		</li>
+		<li data-img-src="style/images/Changebg/4.jpg">
+		<img src="style/images/Changebg/4-4.jpg" width="160" height="100">
+		</li>
+		<li data-img-src="style/images/Changebg/5.jpg">
+		<img src="style/images/Changebg/5-5.jpg" width="160" height="100">
+		</li>
+        <li data-img-src="style/images/Changebg/6.jpg">
+		<img src="style/images/Changebg/6-6.jpg" width="160" height="100">
+		</li>
+		<li data-img-src="style/images/Changebg/7.jpg">
+		<img src="style/images/Changebg/7-7.jpg" width="160" height="100">
+		</li>
+		<li data-img-src="style/images/Changebg/8.jpg">
+		<img src="style/images/Changebg/8-8.jpg" width="160" height="100">
+		</li>
+		<li data-img-src="style/images/Changebg/9.jpg">
+		<img src="style/images/Changebg/9-9.jpg" width="160" height="100">
+		</li>
+	  </ul>
+   </div>
+     <div id="tab-btn"></div>
+    <!--更换背景图   end-->
+   
+   
+   
+   <!--header  begin-->
+   
+   <div id="header">
+   	<h2>The fisrt page.</h2>
+   </div>
+   
+   <!--header  end-->
+   
+   
+   
+   
+   
+   
+   
+   <!--Content 主要内容左  begin-->
+  
+   <div id="left-content"></div>
+   <!--Content 主要内容左  end-->
+   
+   
+   
+   
+   
+   
+   
+   <!--Contenet 主要内容右 begin-->
+   <div id="right-content"></div>
+   <!--Content  主要内容右 end-->
+   
+   
+   
+   
+   
+   
+   
+   <!--Footer  底部  begin-->
+   
+  	        
+<div class="footer">
+    <hr class="footerHr">
+   <div class="footerContent">
+     <a href="">意见反馈</a>
+     |
+     <a href="">违法举报</a>
+     |
+     <a href="">产品论坛</a>
+     |
+     <a href="">使用帮助</a>
+     |
+     <a href="">推广合作</a>
+     |
+     <a href="">官方微信</a>
+     |
+     <a href="">官方微博</a>
+     <br>
+     <span class="footerSpan">服务热线：0000-0000-0000</span><br>
+     <span class="footerSpan">郑州轻工业大学7#504</span>
+   </div>
+</div>
+
+   <!--Footer  底部  end-->
+   
+   
+   
+   
+   
+   
+   
+
+	<!--更换背景及雪花飘落-->
+  <script type="text/javascript">
+  /*
+     需求分析：
+	    1、点击图片  图片容器区块出现、
+		2、点击li  改变相对应的li里面的背景图片
+		   修改body的背景图片 路径
+  */
+    $("#tab-btn").click(function(){
+	   $("#img-wrap").slideToggle();//交替显示
+	});//点击事件
+
+	$("li").click(function(){
+	   var Src = $(this).attr("data-img-src");
+	   $("body").css({
+	     "background-image":"url("+Src+")"
+	   });
+	});
+
+	$.fn.snow({
+	     minSize: 10,
+         maxSize: 50,
+         newOn: 100,
+         flakeColor: "white"
+	});
+  </script>
+
+</body>
 </html>
+<!-- 
+  改变元素位置的方式：1、内外边距  2、浮动  3、定位
+-->
+
+
+
+
+
+
+
