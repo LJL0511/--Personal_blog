@@ -1,9 +1,9 @@
 /*更换背景*/
 body{
 	   background: url(../images/Changebg/1.jpg);
-       background-size:cover;
+       /*background-size:cover;*/
 	   margin:0;
-     /*  overflow:hidden;*/
+      /* overflow:hidden;*/
 	 }
 
 	 ul{
@@ -44,17 +44,102 @@ body{
 #header{
 	width: auto;
 	height: 10%;
-	
+	font-size: 20px;
+	font-family: 宋体;
+	color: black;
+}
+.header-content{
+	margin: 30px 540px;
+}
+/*header*/
+
+
+
+/*nav*/
+#nav {
+	width: 100%;
+	line-height: 40px;
+	height: 40px;
+	margin: 0 auto 10px;
+	background: rgba(245,245,245,0.2);
+	position: relative;
 }
 
+#nav-ul {
+	list-style: none;
+	margin: auto;
+	width: 1030px;
+	height:40px;
+}
+
+#nav ul li {
+	float: left;
+	width: 100px;
+	text-align: center;
+	text-shadow: #333 1px 1px 1px;
+	display: inline-block;
+}
+
+#nav ul li a {
+	color: #FFF;
+	cursor: pointer;
+	display: block;
+}
+
+#nav ul li a:hover {
+	background: #E15782;
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 50px 0;
+}
+
+#nav ul li#nav_current a {
+	background: #E15782;
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 50px 0;
+}
+/*nav*/
+
+
+/*content*/
+#content{
+	width:70%;
+	height:1500px;
+	margin: auto;
+	border: dashed;
+	overflow: hidden;
+}
+/*contetn*/
+
+
+
+
+/*left-content*/
+#left-content{
+	width: 43%;
+	height: 500px;
+	border: dashed;
+}
+/*left-content*/
+
+
+/*right-content*/
+#right-content{
+	width: 23%;
+	height: 500px;
+	float: left;
+	border: dashed;
+}
+/*right-content*/
 
 
 
 
 
-/*Footer 设计*/
-/*footer设计 */
-.footer{
+/*Footer 设计 begin*/
+
+/*.footer{
 	position:absolute;
 	width:100%;
 	height:150px;
@@ -87,11 +172,9 @@ body{
 	color:#999;
 	font-size:14px;
 	
-}
+}*/
 
-
-
-
+/*Footer设计  end*/
 
 
 
