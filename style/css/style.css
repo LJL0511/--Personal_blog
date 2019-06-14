@@ -142,15 +142,17 @@ body{
 /*nav*/
 
 
-/*content*/
-#content{
+
+
+/*maincontent*/
+#maincontent{
 	width:70%;
 	height:1500px;
 	margin: auto;
 	border: dashed;
 	overflow: hidden;
 }
-/*contetn*/
+/*maincontetn*/
 
 
 
@@ -159,7 +161,7 @@ body{
 #left-content{
 	width: 58%;
 	height: 500px;
-	border: dashed;
+/*	border: dashed;*/
 	float: left;
 }
 /*left-content*/
@@ -170,7 +172,7 @@ body{
 	width: 39%;
 	height: 500px;
 	float: right;
-	border: dashed;
+/*	border: dashed;*/
 }
 /*right-content*/
 
