@@ -1,3 +1,8 @@
+a:link,a:visited{text-decoration:none;}
+a{-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;color:#272A30;}
+ul{list-style-type:none}
+
+
 /*更换背景*/
 body{
 	   background: url(../images/Changebg/1.jpg);
@@ -65,7 +70,7 @@ body{
 	position: relative;
 }
 
-#nav-ul {
+#nav-ul{
 	list-style: none;
 	margin: auto;
 	width: 1030px;
@@ -86,27 +91,35 @@ body{
 	display: block;
 	text-decoration:none;
 }
-
 #nav ul li a:hover {
-	background: #E15782;
+	background: #15E5F4;
 	color: #FFF;
 	font-weight: bold;
 	border-radius: 50px 0;
 }
 
-#nav ul li#nav_current a {
-	background: #E15782;
+#nav-ul .active{
+	background: #15E5F4;
 	color: #FFF;
 	font-weight: bold;
 	border-radius: 50px 0;
 }
 
 
+/*#nav ul li#nav_current a {
+	background: #15E5F4;
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 50px 0;
+}*/
 
 
+
+/*
 @media screen and (max-width: 600px) {
-	#nav {
-		position: relative; background: rgba(245, 245, 245, 0.2);
+	#nav{
+		position: relative; 
+		background: rgba(245, 245, 245, 0.2);
 	}	
 	#nav ul {
 		width: 160px;
@@ -121,8 +134,12 @@ body{
 		display: none; 
 		margin: 0;
 	}
-	#nav #nav_current {
-		display: block; background:#E15782;color:#FFF;font-weight:bold; width:100%;
+	#nav #nav_current{
+		display: block; 
+		background:#15E5F4
+		color:#FFF;
+		font-weight:bold;
+		width:100%;
 	}
 	#nav #nav_current a {
 		background: none;
@@ -133,13 +150,19 @@ body{
 		background-image: none;
 	}
 	#nav ul:hover li {
-		display: block;background:#E15782;
+		display: block;
+		background:#15E5F4;
 	}
 	#nav ul li:hover,#nav ul li a:hover {
-		background:rgba(225, 87, 130, 0.5);width:100%; color:#FFF;font-weight:bold;border-radius:0;
+		background:rgba(225, 87, 130, 0.5);
+		width:100%; 
+		color:#FFF;
+		font-weight:bold;
+		border-radius:0;
 	}
-}
+}*/
 /*nav*/
+
 
 
 
