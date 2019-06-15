@@ -6,11 +6,11 @@ ul{list-style-type:none}
 /*更换背景*/
 body{
 	   background:url(../images/Changebg/1.jpg);
-       background-size:100%;
+       background-size:cover;
 	   margin:0;
       /* overflow:hidden;*/
       /*opacity: 0.5; 透明度*/
-       background-repeat:no-repeat;
+/*       background-repeat:no-repeat;*/
 	 }
 
 	 ul{
