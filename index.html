@@ -14,8 +14,7 @@
   <link   rel="stylesheet" type="text/css" href="style/css/bootstrap-reboot.min.css"/>
   <link   rel="stylesheet" type="text/css" href="style/css/bootstrap-grid.min.css"/>
   <link   rel="stylesheet" type="text/css" href="style/css/bootstrap-reboot.css"/>
-  
-  
+   
   <script type="text/javascript" src="style/js/bootstrap.bundle.js"></script>
   <script type="text/javascript" src="style/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="style/js/bootstrap.js"></script>
@@ -30,31 +29,31 @@
  	<!--更换背景图   begin-->
    <div id="img-wrap">
       <ul>
-	    <li data-img-src="style/images/Changebg/1.jpg"><!-- 自定义属性 -->
+	    <li id="bgimg" data-img-src="style/images/Changebg/1.jpg"><!-- 自定义属性 -->
 		<img src="style/images/Changebg/1-1.jpg" width="160" height="100">
 		</li>
-	    <li data-img-src="style/images/Changebg/2.jpg">
+	    <li id="bgimg" data-img-src="style/images/Changebg/2.jpg">
 		<img src="style/images/Changebg/2-2.jpg" width="160" height="100">
 		</li>
-		<li data-img-src="style/images/Changebg/3.jpg">
+		<li id="bgimg" data-img-src="style/images/Changebg/3.jpg">
 		<img src="style/images/Changebg/3-3.jpg" width="160" height="100">
 		</li>
-		<li data-img-src="style/images/Changebg/4.jpg">
+		<li id="bgimg" data-img-src="style/images/Changebg/4.jpg">
 		<img src="style/images/Changebg/4-4.jpg" width="160" height="100">
 		</li>
-		<li data-img-src="style/images/Changebg/5.jpg">
+		<li id="bgimg" data-img-src="style/images/Changebg/5.jpg">
 		<img src="style/images/Changebg/5-5.jpg" width="160" height="100">
 		</li>
-        <li data-img-src="style/images/Changebg/6.jpg">
+        <li id="bgimg" data-img-src="style/images/Changebg/6.jpg">
 		<img src="style/images/Changebg/6-6.jpg" width="160" height="100">
 		</li>
-		<li data-img-src="style/images/Changebg/7.jpg">
+		<li id="bgimg" data-img-src="style/images/Changebg/7.jpg">
 		<img src="style/images/Changebg/7-7.jpg" width="160" height="100">
 		</li>
-		<li data-img-src="style/images/Changebg/8.jpg">
+		<li id="bgimg" data-img-src="style/images/Changebg/8.jpg">
 		<img src="style/images/Changebg/8-8.jpg" width="160" height="100">
 		</li>
-		<li data-img-src="style/images/Changebg/9.jpg">
+		<li id="bgimg" data-img-src="style/images/Changebg/9.jpg">
 		<img src="style/images/Changebg/9-9.jpg" width="160" height="100">
 		</li>
 	  </ul>
@@ -63,13 +62,10 @@
     <!--更换背景图   end-->
    
    
-   
-   <!--header  begin-->
-   
+   <!--header  begin--> 
    <div id="header">
-   	<p class="header-content">LJL个人博客网站</p>
-   </div>
-   
+   	<h2><p class="header-content">LJL个人博客网站</p></h2>
+   </div>  
    <!--header  end-->
    
    
@@ -77,21 +73,63 @@
    <!--nav  begin-->
    <div id="nav">
    	<ul id="nav-ul">
-   		<li id="nav_current">博客首页</li>
-   		<li><a >WEB开发</a></li>
-   		<li><a href="https://ljl0511.github.io/Personal_blog/">Java开发</a></li>
-   		<li><a>算法分析</a></li>
-   		<li><a>数据结构</a></li>
-   		<li><a>分享</a></li>
-   		<li><a>IT资讯</a></li>
-   		<li><a>心得笔记</a></li>
-   		<li><a>回忆</a></li>
+   		<li id="nav_current"  class="active"><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/main.html')">博客首页</a></li>
+   		<li ><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/web.html')">WEB开发</a></li>
+   		<li><a href="javascript:void(0);"  onclick="loadXMLDoc('maincontent/java.html')">Java开发</a></li>
+   		<li ><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/algorithm_analysis.html')">算法分析</a></li>
+   		<li ><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/data_structure.html')">数据结构</a></li>
+   		<li ><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/share.html')">分享</a></li>
+   		<li ><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/IT_info.html')">IT资讯</a></li>
+   		<li ><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/notes.html')">心得笔记</a></li>
+   		<li ><a href="javascript:void(0);" onclick="loadXMLDoc('maincontent/memory.html')">回忆</a></li>
    	</ul>
    </div>
    <!--nav  end-->
    
+  		 <!--设置导航栏颜色变化-->
+	    <script type='text/javascript'>
+	        $(document).ready(function (){// ready 事件
+	            $("li").each(function(index){//便利对象
+	                $(this).click(function(){//点击触发事件
+	                    $("li").removeClass("active");//删除当前元素的样式
+	                    $("li").eq(index).addClass("active");//添加当前元素的样式
+	                });
+	            });
+	        });
+	</script>
+
+
+		<!--点击导航栏更换content内容-->
+		<script type='text/javascript'>
+		function loadXMLDoc(url)
+		{
+		  var xmlhttp;
+		  if (window.XMLHttpRequest)
+		  {
+		    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		    xmlhttp=new XMLHttpRequest();
+		  }
+		  else
+		  {
+		    // IE6, IE5 浏览器执行代码
+		    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		  xmlhttp.onreadystatechange=function()
+		  {
+		    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		      document.getElementById("maincontent").innerHTML=xmlhttp.responseText;
+		    }
+		  }
+		  xmlhttp.open("GET",url,true);
+		  xmlhttp.send();
+		}
+		</script>
+
    
-   
+
+ 
+   <!--进度条-->
    <div class="progress">
   <div class="progress-bar progress-bar-success progress-bar-striped" 
   	role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
@@ -100,12 +138,10 @@
 </div>
 
 
-   
-   
-   <div id="maincontent">
-   	
 
-   <!--left-Content 主要内容左  begin-->
+   
+    <div id="maincontent">
+     <!--<!--left-Content 主要内容左  begin-->
    <div id="left-content">
 	<div class="jumbotron">
 	  <h1>Hello, world!</h1>
@@ -114,16 +150,10 @@
 	  	<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 	  </p>
 </div>
-
-
-	
    </div>
    <!--left-Content 主要内容左  end-->
    
    
-   
-   
-
    
    <!--rignt-Contenet 主要内容右 begin-->
    <div id="right-content">
@@ -176,15 +206,9 @@
 	
    </div>
    <!--right-Content  主要内容右 end-->
-   
-   
-
     
     </div>
-   
-   
-   
-   
+ 
    <!--Footer  底部  begin-->
    
   	        
@@ -231,7 +255,7 @@
 	   $("#img-wrap").slideToggle();//交替显示
 	});//点击事件
 
-	$("li").click(function(){
+	$("#img-wrap").find("li").click(function(){
 	   var Src = $(this).attr("data-img-src");
 	   $("body").css({
 	     "background-image":"url("+Src+")"
@@ -248,11 +272,13 @@
 
 </body>
 
-
+<!--snow效果-->
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://itbyc.com/templets/yang/js/snow.js"></script>
 <style type="text/css">.snow-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100001;}</style>
 <div class="snow-container"></div>
+<!--snow效果-->
+
 </html>
 <!-- 
   改变元素位置的方式：1、内外边距  2、浮动  3、定位
