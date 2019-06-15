@@ -180,28 +180,74 @@ body{
 
 /*left-content*/
 #left-content{
-	width: 58%;
+	width: 60%;
 	height: 500px;
 /*	border: dashed;*/
+	background-color: blanchedalmond;
 	float: left;
 }
 /*left-content*/
 
+.jumbotron{
+	width:95%;
+	margin-left: 20px;
+	margin-top: 10px;
+}
 
-/*right-content*/
+
+
+
+/*right-content begin*/
 #right-content{
 	width: 39%;
-	height: 500px;
+	height: 600px;
 	float: right;
+	margin-top:30px;
 /*	border: dashed;*/
 }
 
-#right-content{
-	margin-top:30px;
+
+/*jiugong*/
+#jiugong{
+	width: 100%;
+	height:200px;
+	margin-left: 50px;
 }
 
 
-/*right-content*/
+/*motto*/
+#motto{
+	width: 80%;
+	height: 200px;
+	margin-left: 50px;
+	margin-top:5px;
+	background-color: bisque;
+}
+
+#motto_p{
+	width: 201px;
+	margin-left:105px;
+	padding-top: 65px;
+}
+
+/*photo*/
+#photo{
+	margin-top: 15px;
+	margin-left: 50px;
+	float: left;
+}
+
+#photoinfo{
+	margin-top: 15px;
+	margin-left: 10px;
+	float: left;
+}
+.photoinfo{
+	height: 18px;
+}
+
+
+/*right-content end*/
 
 
 
