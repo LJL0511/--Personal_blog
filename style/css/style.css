@@ -209,9 +209,13 @@ body{
 }
 
 /*jiugong*/
-.thumbnail{
+/*.thumbnail{
 	margin-left: 1px;
 }
+.col-md-3{
+	margin-left: 10px;
+	margin-top: 8px;
+}*/
 
 
 /*jiugong*/
