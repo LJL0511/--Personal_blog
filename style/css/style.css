@@ -8,6 +8,7 @@ body{
 	   background:url(../images/Changebg/1.jpg);
        background-size:cover;
 	   margin:0;
+	   overflow-y:scroll;
       /* overflow:hidden;*/
       /*opacity: 0.5; 透明度*/
 /*       background-repeat:no-repeat;*/
