@@ -9,13 +9,13 @@ ul{list-style-type:none}
 
 /*更换背景*/
 body{
-	   background:url(../images/Changebg/1.jpg);
-       background-size:cover;
-	   margin:0;
-	/*   overflow-y:scroll;*/
+	  background:url(../images/Changebg/1.jpg);
+     /*  background-size:cover;*/
+	  margin:0;
+	 /*overflow-y:scroll;*/
       /* overflow:hidden;*/
       /*opacity: 0.5; 透明度*/
-/*       background-repeat:no-repeat;*/
+      background-repeat:no-repeat;
 	 }
 
 	 ul{
@@ -175,7 +175,7 @@ body{
 /*maincontent*/
 #maincontent{
 	width:70%;
-	height:1450px;
+/*	height:1450px;*/
 	margin: auto;
 /*	border: dashed;*/
 	/*overflow: hidden;*/
@@ -188,7 +188,7 @@ body{
 /*left-content*/
 #left-content{
 	width: 60%;
-	height: 1500px;
+/*	height: 1500px;*/
 /*	border: dashed;*/
 	background-color: #FFFFFF;
 	float: left;
@@ -207,7 +207,7 @@ body{
 /*right-content begin*/
 #right-content{
 	width: 39%;
-	height: 1500px;
+/*	height: 1500px;*/
 	float: right;
 	margin-top:30px;
 /*	border: dashed;*/
