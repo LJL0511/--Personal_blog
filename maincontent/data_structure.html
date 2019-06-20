@@ -5,16 +5,52 @@
 		<title></title>
 		 <link rel="stylesheet" type="text/css" href="./style/css/webStyle.css"/>
 	</head>
+	<style type="text/css">
+		body{
+			background-color: #9BE7B6;
+		}
+	</style>
 	<body>
 		
-				<div id="maincontent">
 		
+		<div id="maincontent">
+		 		
+		 	
+		 <!--点击导航栏更换content内容-->
+		<script type='text/javascript'>
+		function loadXMLDoc(url)
+		{
+		  var xmlhttp;
+		  if (window.XMLHttpRequest)
+		  {
+		    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		    xmlhttp=new XMLHttpRequest();
+		  }
+		  else
+		  {
+		    // IE6, IE5 浏览器执行代码
+		    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		  xmlhttp.onreadystatechange=function()
+		  {
+		    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		      document.getElementById("maincontent").innerHTML=xmlhttp.responseText;
+		    }
+		  }
+		  xmlhttp.open("GET",url,true);
+		  xmlhttp.send();
+		}
+		</script>
+
+   
+		 	
 		<div class="search-list-con">
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">数据结构</a>	
+						<a href="javascript:void(0);" onclick="loadXMLDoc('essay/data_structure_array01.html')">数组总结</a>	
 					</div>
 				</dt>
 				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
