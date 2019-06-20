@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+
+		#content{
+			width:90%;
+			margin: auto;
+			background-color: floralwhite;
+		}
+		h2{
+			font-weight:bold;
+		}
+		.attention:hover{
+			color:#F63172;
+		}
+	</style>
+	
+	<body>
+		<div id="content">
+			<center><h2>不要小瞧数组！</h2></center>
+	<!--		<p><a  href="./index.html">返回</a></p>-->
+			<pre>
+				
+ 		
+<p class="attention">从底层实现对数组的操作,定义一个数组，为其添加增、删、改、查等功能。</p><p style="background-color: blanchedalmond;">
+public class Array<E> {
+    //该数组可以存储任何数据类型的数据，（boolean、byte、short、int、long、char、float、double
+            则必须使用对应的包装类Boolean、Byte、Short、Int、Long、Char、Float、Double）
+    private E[] data;
+    private int size;
+
+    // 构造函数，传入数组的容量capacity构造Array
+    public Array(int capacity){
+        data = (E[])new Object[capacity];
+        size = 0;
+    }
+
+    // 无参数的构造函数，默认数组的容量capacity=10
+    public Array(){
+        this(10);
+    }
+
+    // 获取数组的容量
+    public int getCapacity(){
+        return data.length;
+    }
+
+    // 获取数组中的元素个数
+    public int getSize(){
+        return size;
+    }
+
+    // 返回数组是否为空
+    public boolean isEmpty(){
+        return size == 0;
+    }
+
+    // 在index索引的位置插入一个新元素e
+    public void add(int index, E e){
+
+        if(index < 0 || index > size)
+            throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
+
+        if(size == data.length)
+            resize(2 * data.length);
+
+        for(int i = size - 1; i >= index ; i --)
+            data[i + 1] = data[i];
+
+        data[index] = e;
+
+        size ++;
+    }
+
+    // 向所有元素后添加一个新元素
+    public void addLast(E e){
+        add(size, e);
+    }
+
+    // 在所有元素前添加一个新元素
+    public void addFirst(E e){
+        add(0, e);
+    }
+
+    // 获取index索引位置的元素
+    public E get(int index){
+        if(index < 0 || index >= size)
+            throw new IllegalArgumentException("Get failed. Index is illegal.");
+        return data[index];
+    }
+
+    // 修改index索引位置的元素为e
+    public void set(int index, E e){
+        if(index < 0 || index >= size)
+            throw new IllegalArgumentException("Set failed. Index is illegal.");
+        data[index] = e;
+    }
+
+    // 查找数组中是否有元素e
+    public boolean contains(E e){
+        for(int i = 0 ; i < size ; i ++){
+            if(data[i].equals(e))
+                return true;
+        }
+        return false;
+    }
+
+    // 查找数组中元素e所在的索引，如果不存在元素e，则返回-1
+    public int find(E e){
+        for(int i = 0 ; i < size ; i ++){
+            if(data[i].equals(e))
+                return i;
+        }
+        return -1;
+    }
+
+    // 从数组中删除index位置的元素, 返回删除的元素
+    public E remove(int index){
+        if(index < 0 || index >= size)
+            throw new IllegalArgumentException("Remove failed. Index is illegal.");
+
+        E ret = data[index];
+        for(int i = index + 1 ; i < size ; i ++)
+            data[i - 1] = data[i];
+        size --;
+        data[size] = null; // loitering objects != memory leak
+
+        if(size == data.length / 4 && data.length / 2 != 0)
+            resize(data.length / 2);
+        return ret;
+    }
+
+    // 从数组中删除第一个元素, 返回删除的元素
+    public E removeFirst(){
+        return remove(0);
+    }
+
+    // 从数组中删除最后一个元素, 返回删除的元素
+    public E removeLast(){
+        return remove(size - 1);
+    }
+
+    // 从数组中删除元素e
+    public void removeElement(E e){
+        int index = find(e);
+        if(index != -1)
+            remove(index);
+    }
+
+    @Override
+    public String toString(){
+
+        StringBuilder res = new StringBuilder();
+        res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
+        res.append('[');
+        for(int i = 0 ; i < size ; i ++){
+            res.append(data[i]);
+            if(i != size - 1)
+                res.append(", ");
+        }
+        res.append(']');
+        return res.toString();
+    }
+
+    // 将数组空间的容量变成newCapacity大小
+    private void resize(int newCapacity){
+
+        E[] newData = (E[])new Object[newCapacity];
+        for(int i = 0 ; i < size ; i ++)
+            newData[i] = data[i];
+        data = newData;
+    }
+}</p><p style="font-size: 16px;">
+    我们知道，数组是一种引用数据类型，数组引用变量只是一个引用，数组元素和数组变量在内存里是分开存放的，下面介绍数组在内存中的运行机制。
+  1.内存中的数组
+    数组引用变量只是一个引用，这个引用变量可以指向任何有效的内存，只有当该引用指向有效内存后，才可以通过该数组变量来访问数组元素，因为，引用
+  变量是访问真实对象的根本方式。也就是说，如果我们希望在程序中访问数组，则只能通过这个数组的引用变量来访问它。而实际的数组元素被存储在堆(Heap)
+  内存中，引用变量则被存储在栈(Stack)内存中。
+    当一个方法执行时，每个方法都会建立自己的内存栈，在这个方法内定义的变量将会被逐个存入这块栈内存里，当方法执行结束，这个方法的内存栈也就自
+  然被销毁了。所以在所有方法中定义的变量都是存放在内存栈里的；当我们在内存中创建一个对象时，这个对象将被保存在“运行时数据区中”，以便于反复利用，
+  这是因为对象的创建成本通常较大，这个运行时数据区就是堆内存，对内存中的对象不会随着方法的结束而销毁，只有当一个对象没有任何引用变量引用它的时
+  候，系统的垃圾回收机制才会在合适的时候回收它。如果堆内存中数组不再有任何变量引用指向自己，那么这个数组将成为垃圾，它所占的内存将会被系统的垃
+  圾回收机制所回收。
+    这里要注意的一点是：在java中，只要类型相互兼容，可以让一个数组变量指向另一个实际的数组，好多人在这儿会认为java数组的长度可变，其实只是这
+  种机制让人产生的错觉。所以当我们在看待数组的时候，应该把数组看成两个部分：一个是数组引用，也就是在代码中定义的引用变量，另外一个就是实际数组
+  本身，这个部分是在系统内存里的，我们通常无法直接访问它，只能通过数组引用变量来访问。
+		</p>	
+		
+			
+				
+			</pre>
+
+		</div>
+		
+	</body>
+</html>
