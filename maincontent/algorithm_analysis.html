@@ -5,12 +5,54 @@
 		<title></title>
 		 <link rel="stylesheet" type="text/css" href="./style/css/webStyle.css"/>
 	</head>
+		<style type="text/css">
+		body{
+			background-color: #9BE7B6;
+		}
+	</style>
 	<body>
 		
+		 <!--点击导航栏更换content内容-->
+		<script type='text/javascript'>
+		function loadXMLDoc(url)
+		{
+		  var xmlhttp;
+		  if (window.XMLHttpRequest)
+		  {
+		    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		    xmlhttp=new XMLHttpRequest();
+		  }
+		  else
+		  {
+		    // IE6, IE5 浏览器执行代码
+		    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		  xmlhttp.onreadystatechange=function()
+		  {
+		    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		      document.getElementById("search-list-con").innerHTML=xmlhttp.responseText;
+		    }
+		  }
+		  xmlhttp.open("GET",url,true);
+		  xmlhttp.send();
+		}
+		</script>
 		
-				<div id="maincontent">
+		
+		<div id="maincontent">
 		
 		<div class="search-list-con">
+			
+			<dl class="search-list J_search">
+				<dt>
+					<div  class="limit_width" style="height: 30px;">
+							<a href="javascript:void(0);" onclick="loadXMLDoc('algorithm_essay/Third_largest_number.html')">第三最大数</a>	
+					</div>
+				</dt>
+				<dd>给定一个非空数组，返回此数组中第三大的数。如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是O(n)。</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
+			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
@@ -18,100 +60,90 @@
 						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
-			</dl>
-			
-			<dl class="search-list J_search">
-				<dt>
-					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
-					</div>
-				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。
-				  web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。
+				<dd>算法分析
+				  算法分析
 				</dd>
-				<dd>www.baidu.com</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 			
 			<dl class="search-list J_search">
 				<dt>
 					<div  class="limit_width" style="height: 30px;">
-						<a href="">Web开发工具</a>	
+						<a href="">算法分析</a>	
 					</div>
 				</dt>
-				<dd>web开发工具(WebBuilder)是一款跨平台、数据库和浏览器的可视化Web应用开发平台。</dd>
-				<dd>www.baidu.com</dd>
+				<dd>算法分析</dd>
+				<dd><a href="https://ljl0511.github.io/Personal_blog/">https://ljl0511.github.io/Personal_blog/</a></dd>
 			</dl>
 
 		</div>
